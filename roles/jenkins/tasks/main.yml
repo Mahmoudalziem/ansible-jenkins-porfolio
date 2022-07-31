@@ -1,0 +1,23 @@
+---
+- name: touch Directory Jenknis
+  file:
+    name: "{{ HOST_VOLUME }}"
+    state: directory
+
+- name: pull jenkins Image
+  docker_image:
+    name:  "{{ DOCKER_IMAGE }}"
+    source: pull
+
+- name: run jenkins image
+  docker_container:
+    name:  jenkins
+    image: "{{ DOCKER_IMAGE }}"
+    state: started
+    user: root
+    restart_policy: always
+    ports: "{{ HOST_PORT }}:{{ CONTAINER_PORT }}"
+    volumes:
+      - "{{ MOUNT_DOCKER }}:{{ MOUNT_DOCKER }}"
+      - "{{ HOST_VOLUME }}:{{ CONTAINER_VOLUME }}"
+    working_dir:  "{{ CONTAINER_VOLUME }}"

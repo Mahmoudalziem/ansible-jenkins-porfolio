@@ -1,0 +1,6 @@
+---
+- name: install jenkins
+  hosts: prod
+  remote_user: root
+  roles:
+    - roles/jenkins

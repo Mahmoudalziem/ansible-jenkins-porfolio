@@ -1,0 +1,7 @@
+---
+- name: Gatering EC2 MetaData
+  ec2_metadata_facts:
+
+- name: Print Ec2 Public Ip
+  debug:
+    msg: "EC2 Public Ipv4 : {{ ansible_ec2_public_ipv4 }}"

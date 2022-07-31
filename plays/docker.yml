@@ -1,0 +1,6 @@
+---
+- name: install docker
+  hosts: prod
+  remote_user: root
+  roles:
+    - roles/docker

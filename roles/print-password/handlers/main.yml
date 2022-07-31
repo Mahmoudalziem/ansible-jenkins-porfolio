@@ -1,0 +1,4 @@
+---
+- name: print-password
+  debug:
+    msg: 'Jenkins Password : {{ docker.stdout }}'

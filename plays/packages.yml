@@ -1,0 +1,6 @@
+---
+- name: install packages
+  hosts: prod
+  remote_user: root
+  roles:
+    - roles/packages

@@ -1,0 +1,6 @@
+---
+- import_playbook: plays/packages.yml
+- import_playbook: plays/docker.yml
+- import_playbook: plays/jenkins.yml
+- import_playbook: plays/print.yml
+- import_playbook: plays/ec2.yml

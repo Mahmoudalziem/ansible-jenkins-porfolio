@@ -1,0 +1,7 @@
+---
+HOST_PORT: 8080
+CONTAINER_PORT: 8080
+MOUNT_DOCKER: /var/run/docker.sock
+HOST_VOLUME: /root/jenkins
+CONTAINER_VOLUME: /var/jenkins_home
+DOCKER_IMAGE: azima/jenkins-docker

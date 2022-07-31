@@ -1,0 +1,6 @@
+---
+- name: Print Jenkins Password 
+  hosts: prod
+  remote_user: root
+  roles:
+    - roles/print-password

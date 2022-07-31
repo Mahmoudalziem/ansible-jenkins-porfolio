@@ -1,0 +1,6 @@
+---
+- name: ec2 public ip
+  hosts: prod
+  remote_user: root
+  roles:
+    - roles/ec2

@@ -1,0 +1,5 @@
+---
+- name: get INIT password Jenkins
+  command: docker exec -u 0 -it jenkins cat {{ jenkinsInitPassword }}
+  register: docker
+  notify: print-password
