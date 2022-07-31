@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!---Required meta Tags --->
+    <meta charset="UTF-8">
+    <meta name="description" content="Hello Come Back">
+    <meta name="application-name" content="Portfolio-Azima">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="{{ name }}">
+
+    <title>{{ name }} Portfolio</title>
+
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- site icon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+    <!-- font -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <!--[if lt IE 9]>
+            <script type="text/javascript"src="plugins/html5shiv.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <!--header area navbar start -->
+
+    <div class="header">
+        <!-- navbar start -->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+                    <button class="navbar-toggler" data-target="#navbar-dropdown" data-toggle="collapse">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-inner navbar-collapse collapse" id="navbar-dropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" data-scroll="background-carousel" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-scroll="about-section" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-scroll="services-section" class="nav-link">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-scroll="resume-section" class="nav-link">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-scroll="work-section" class="nav-link">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-scroll="contact-section" class="nav-link">
+                                contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End of navbar Header -->
+
+
+    <!-- Background carousel Start --->
+    <div class="background-carousel block" id="background-carousel">
+        <div class="container">
+            <div class="content">
+                <h4 class="wow fadeInUp animated" data-wow-delay=".2s">Hi This is</h4>
+                <h2 class="wow fadeInUp animated" data-wow-delay=".4s">Mahmoud Abd Alziem</h2>
+                <p class="wow fadeInUp animated type" data-wow-delay=".6s">Devops Engineer && Full Stack Developer</p>
+                <ul class="social-icon wow fadeInUp animated" data-wow-delay=".8s">
+                    <li><a href="https://www.facebook.com/Alziem2" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/MahmoudAlziem" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/mahmoud_elziem/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/mahmoud-abd-alziem-40434013b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.behance.net/mahmoudalziem" target="_blank"><i class="fa fa-behance"></i></a></li>
+                </ul>
+                <a href="#" class="free-quote wow fadeInUp animated" data-wow-delay="1s">Get A free Quote</a>
+                <br>
+                <a class="scroll-to-bottom wow fadeInUp animated" data-wow-delay="1.2s">
+                    <i class="fa fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End background carousel --->
+
+    <div class="about-section block" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="about-section-image wow fadeInLeft animated" data-wow-delay=".3s">
+                        <img src="{{ url_for('static', filename='images/about/about-1.png') }}">
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="about-section-content wow fadeInRight animated" data-wow-delay=".3s">
+                        <h3>Hi Guys!</h3>
+                        <p>Seeking an opportunity in IT to participate collaborating, competitive and creative environment to utilize and enhance my experience in web development field for the growth of an organization and whereby I can capitalize and continue
+                            building longexperience. I am always eager to learn about new technologies
+                        </p>
+                        <div>
+                            <span>Name</span>
+                            <span>:</span>
+                            <span>Mahmoud Abd Alziem</span>
+                        </div>
+                        <div>
+                            <span>Age</span>
+                            <span>:</span>
+                            <span>{{ age }} Years</span>
+                        </div>
+                        <div>
+                            <span>Experience</span>
+                            <span>:</span>
+                            <span>2 Years</span>
+                        </div>
+                        <div>
+                            <span>Country</span>
+                            <span>:</span>
+                            <span>Egypt</span>
+                        </div>
+                        <div>
+                            <span>Location</span>
+                            <span>:</span>
+                            <span>Zagazig Abu Hammed</span>
+                        </div>
+                        <div>
+                            <span>E-mail</span>
+                            <span>:</span>
+                            <span> mahmoudalziem98@gmail.com</span>
+                        </div>
+                        <div>
+                            <span>Phone</span>
+                            <span>:</span>
+                            <span>01007449298</span>
+                        </div>
+                        <div>
+                            <span>Freelance</span>
+                            <span>:</span>
+                            <span>Available</span>
+                        </div>
+
+                        <div class="about-section-contact">
+                            <a href="files/cv.pdf" download="Resume" target="_blank">
+                                <i class="fa fa-download"></i> Download Resume
+                            </a>
+                            <a href="#" target="_self">
+                                <i class="fa fa-commenting-o"></i> Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Section --->
+
+
+    <!--- Services Section Start --->
+
+    <div class="services-section block" id="services-section">
+        <div class="container">
+            <div class="services-section-header wow flipInX animated" data-wow-delay=".4s">What I do</div>
+            <div class="row">
+
+                <div class="col-lg-3 col-md -6 col-12">
+                    <div class="services-section-content wow fadeInDown animated" data-wow-delay=".9s">
+                        <i class="fa fa-briefcase"></i>
+                        <h3>Devops Engineer</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md -6 col-12">
+                    <div class="services-section-content wow fadeInDown animated" data-wow-delay=".3s">
+                        <i class="fa fa-group"></i>
+                        <h3>Front End developer</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md -6 col-12">
+                    <div class="services-section-content wow fadeInDown" data-wow-delay=".6s">
+                        <i class="fa fa-laptop"></i>
+                        <h3>Back End developer</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-3 col-md -6 col-12">
+                    <div class="services-section-content wow fadeInDown animated" data-wow-delay="1.2s">
+                        <i class="fa fa-bug"></i>
+                        <h3>Business Branding</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End Services Section --->
+
+    <!-- resume Section Start --->
+
+    <div class="resume-section block" id="resume-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="resume-section-content wow fadeInLeft animated" data-wow-delay=".3s">
+                        <ul>
+                            <li>
+                                <i class="fa fa-edge"></i>
+                                <h3>Education</h3>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h4>Bsc In CSE - Zagazig University</h4>
+                                    <aside>2016-2020</aside>
+                                    <p>
+                                        Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="content">
+                                    <h4>Bsc In CSE - Zagazig University</h4>
+                                    <aside>2016-2020</aside>
+                                    <p>
+                                        Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.
+                                    </p>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="content">
+                                    <h4>Bsc In CSE - Yale University</h4>
+                                    <aside>2016-2020</aside>
+                                    <p>
+                                        Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.
+                                    </p>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!--- End column one --->
+
+
+                <div class="col-md-6 col-12 wow fadeInRight animated" data-wow-delay=".6s">
+                    <!--- Start Column Two -->
+                    <div class="resume-section-content">
+                        <ul>
+                            <li>
+                                <i class="fa fa-edge"></i>
+                                <h3>Experience</h3>
+                                <div class="clear"></div>
+                            </li>
+
+                            <li>
+                                <div class="content">
+                                    <h4>Bsc In CSE - Zagazig University</h4>
+                                    <aside>2016-2020</aside>
+                                    <p>
+                                        Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.
+                                    </p>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="content">
+                                    <h4>Bsc In CSE - Zagazig University</h4>
+                                    <aside>2016-2020</aside>
+                                    <p>
+                                        Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.
+                                    </p>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="content">
+                                    <h4>Bsc In CSE - Zagazig University</h4>
+                                    <aside>2016-2020</aside>
+                                    <p>
+                                        Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.
+                                    </p>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!--- End column Two --->
+
+
+            </div>
+            <!-- End of row -->
+        </div>
+        <!-- End Of Container -->
+    </div>
+    <!--- End Of resume Section -->
+    </div>
+    <!--- End Of resume Section -->
+
+
+
+    <!--- Work Section Start --->
+
+    <div class="work-section block" id="work-section">
+        <div class="container">
+            <h3 class="wow flipInX animated" data-wow-delay=".4s">My Remarkable Works</h3>
+            <div class="col-12">
+                <div class="controls">
+                    <a class="active" data-filter="all">
+                             All
+                         </a>
+                    <a data-filter=".design">
+                             Design
+                         </a>
+                    <a data-filter=".development">
+                             Development
+                         </a>
+                    <a data-filter=".print">
+                             Print
+                         </a>
+                </div>
+            </div>
+            <div class="row" id="mixItUp">
+                <div class="col-md-4 col-12 col-lg-4 mix print development">
+                    <div class="work-gallery-image wow fadeInLeft animated" data-wow-delay=".3s">
+                        <img src="{{ url_for('static', filename='images/gallery/img-1.jpg') }}">
+                        <div class="image-details">
+                            <i class="fa fa-eye" data-content="{{ url_for('static', filename='images/gallery/img-1.jpg') }}"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-12 col-lg-4 mix print development">
+                    <div class="work-gallery-image wow fadeInUp animated" data-wow-delay=".6s">
+                        <img src="{{ url_for('static', filename='images/gallery/img-2.jpg') }}">
+                        <div class="image-details">
+                            <i class="fa fa-eye" data-content="{{ url_for('static', filename='images/gallery/img-2.jpg') }}"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-12 col-lg-4 mix design print">
+                    <div class="work-gallery-image wow fadeInRight animated" data-wow-delay=".8s">
+                        <img src="{{ url_for('static', filename='images/gallery/img-3.jpg') }}">
+                        <div class="image-details">
+                            <i class="fa fa-eye" data-content="{{ url_for('static', filename='images/gallery/img-3.jpg') }}"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-12 col-lg-4 mix print development">
+                    <div class="work-gallery-image wow fadeInLeft animated" data-wow-delay=".3s">
+                        <img src="{{ url_for('static', filename='images/gallery/img-4.jpg') }}">
+                        <div class="image-details">
+                            <i class="fa fa-eye" data-content="{{ url_for('static', filename='images/gallery/img-4.jpg') }}"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-12 col-lg-4 max design print">
+                    <div class="work-gallery-image wow fadeInUp animated" data-wow-delay=".6s">
+                        <img src="{{ url_for('static', filename='images/gallery/img-5.jpg') }}">
+                        <div class="image-details">
+                            <i class="fa fa-eye" data-content="{{ url_for('static', filename='images/gallery/img-5.jpg') }}"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 col-12 col-lg-4 mix development design">
+                    <div class="work-gallery-image wow fadeInRight" data-wow-delay=".8s">
+                        <img src="{{ url_for('static', filename='images/gallery/img-6.jpg') }}">
+                        <div class="image-details">
+                            <i class="fa fa-eye" data-content="{{ url_for('static', filename='images/gallery/img-6.jpg') }}"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="image-popup">
+                <img src="" alt="Image-PopUp">
+            </div>
+            <a><i class="fa fa-close"></i></a>
+        </div>
+    </div>
+
+    <!-- end Of Work Section --->
+
+
+    <div class="work-counter">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-3">
+                    <div class="work-counter-content wow fadeInDown animated" data-wow-delay=".3s">
+                        <i class="fa fa-briefcase"></i>
+                        <div class="counter">250</div>
+                        <p>PROJECT WORKING</p>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <div class="work-counter-content wow fadeInDown animated" data-wow-delay=".6s">
+                        <i class="fa fa-check-circle-o"></i>
+                        <div class="counter">250</div>
+                        <p>PROJECT WORKING</p>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <div class="work-counter-content wow fadeInDown animated" data-wow-delay=".8s">
+                        <i class="fa fa-diamond"></i>
+                        <div class="counter">250</div>
+                        <p>PROJECT WORKING</p>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <div class="work-counter-content wow fadeInDown animated" data-wow-delay="1s">
+                        <i class="fa fa-heart-o"></i>
+                        <div class="counter">250</div>
+                        <p>PROJECT WORKING</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End work counter section -->
+
+
+    <div class="contact-section block" id="contact-section">
+        <div class="container">
+            <div class="contact-section-content wow fadeInUp animated" data-wow-delay=".4s">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <h3>Contact Form</h3>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <input type="text" placeholder="Name">
+                                    <div data-error="Enter Your Name"></div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="email" placeholder="Email">
+                                    <div data-error="Enter Your Email"></div>
+                                </div>
+
+                                <div class="col-12">
+                                    <input type="text" placeholder="Subject">
+                                    <div data-error="Enter Your Subject"></div>
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea placeholder="Your Message"></textarea>
+                                    <div data-error="Enter Your Message"></div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="submit" value="Send Message">
+                                </div>
+
+
+                            </div>
+                            <!-- End Of Row -->
+                        </form>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <h3>Contact Address</h3>
+                        <div class="content-address">
+
+                            <div class="single-contact">
+                                <i class="fa fa-address-book"></i>
+                                <span>Zagazig ,Abu Hammed </span>
+                            </div>
+
+                            <div class="single-contact">
+                                <i class="fa fa-telegram"></i>
+                                <span>Zagazig ,Abu Hammed </span>
+                                <p> mahmoudalziem98@gmail.com</p>
+                            </div>
+
+
+                            <div class="single-contact">
+                                <i class="fa fa-phone"></i>
+                                <span>+02   01007449298 </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- End Contact Section ---->
+
+    <!--- Start Mapping Section --->
+    <div class="content-map">
+        <div class="container">
+            <div class="map-section wow fadeInUp animated" data-wow-delay=".4s">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.76973634891!2d31.188423541796382!3d30.059469890351075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C+Cairo+Governorate!5e0!3m2!1sen!2seg!4v1542927492095"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Footer Section --->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="designer-name wow fadeInLeft animated" data-wow-delay=".3s">
+                        Designed By Mahmoud Abd alziem @ 2018
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <ul class="social-icon wow fadeInRight animated" data-wow-delay=".6s">
+                        <li><a href="https://www.facebook.com/Alziem2" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/MahmoudAlziem" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/mahmoud_elziem/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/mahmoud-abd-alziem-40434013b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.behance.net/mahmoudalziem" target="_blank"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!--- Download App Section -->
+
+    <!-- <div class="download-section">
+        <div class="button">
+            <i class="fa fa-bars"></i>
+        </div>
+        <a href="images/AppDownload/azima.apk" download="My App">
+            <i class="fa fa-download"></i>
+            <span>Download App</span>
+        </a>
+    </div> -->
+
+    <!--- Scroll Top Button --->
+    <div class="scroll-top">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+    <!--- loading page Button --->
+    <div class="loading-page">
+        <div class="load"></div>
+    </div>
+    <!--Jquery Plugins -->
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/typed.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/wow.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/form-validator.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/mixitup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/jquery.counterup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/jquery.waypoints.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='plugins/main.js') }}"></script>
+</body>
+
+</html>
