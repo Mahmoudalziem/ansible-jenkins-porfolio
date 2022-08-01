@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Lanuch Ec2 Instance
+Metadata: 
+  name: "Mahmoud Abd Alziem"
+
+Parameters: 
+  ProjectName:
+    Description: Enter Project Name
+    Type: String
+    Default: ansible
+
+Resources: 
+  MyEc2:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName: test
+      ImageId: ami-02f3416038bdb17fb
+      InstanceType: t2.micro
+      Monitoring: false
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true" 
+          DeviceIndex: "0"
+          GroupSet: 
+            - sg-0a2a826bcbd516536
+          SubnetId: subnet-0fdfbf323eafba581
+      UserData: !Base64 |
+        #!/bin/bash -ex
+        # put your script here
+      Tags:
+        - Key: key
+          Value: !Sub "${ProjectName}-Ec2"
+Outputs:
+  Ec2Ip:
+    Description: Export Ec2 Public Ip
+    Value: !GetAtt MyEc2.PublicIp
+    Export: 
+      Name: !Sub "${ProjectName}-Ec2"
