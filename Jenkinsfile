@@ -32,7 +32,7 @@ pipeline{
             steps{
                 catchError(message: "Message"){
                     sh '''
-                        docker rm -f Portfolio
+                        docker rm -f portfolio
                     '''
                 }
             }
