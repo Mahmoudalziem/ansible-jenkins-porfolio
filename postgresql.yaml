@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: sonarqube
+    meta.helm.sh/release-namespace: sonarqube
+  creationTimestamp: "2022-08-20T17:42:12Z"
+  labels:
+    app.kubernetes.io/instance: sonarqube
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: postgresql
+    helm.sh/chart: postgresql-10.15.0
+  name: sonarqube-postgresql
+  namespace: sonarqube
+  resourceVersion: "11168"
+  uid: 8ed27b49-8154-4198-8b5e-7dbf2adb47c8
+spec:
+  clusterIP: 172.20.201.43
+  clusterIPs:
+  - 172.20.201.43
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: tcp-postgresql
+    port: 5432
+    protocol: TCP
+    targetPort: tcp-postgresql
+  selector:
+    app.kubernetes.io/instance: sonarqube
+    app.kubernetes.io/name: postgresql
+    role: primary
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: sonarqube
+    meta.helm.sh/release-namespace: sonarqube
+  creationTimestamp: "2022-08-20T17:42:12Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app: sonarqube
+    app.kubernetes.io/managed-by: Helm
+    chart: sonarqube-5.0.0_336
+    heritage: Helm
+    release: sonarqube
+  name: sonarqube-sonarqube
+  namespace: sonarqube
+  resourceVersion: "12280"
+  uid: 185c82f8-4723-4f06-9a9e-b8e1354f12f6
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 172.20.122.215
+  clusterIPs:
+  - 172.20.122.215
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    nodePort: 32540
+    port: 5000
+    protocol: TCP
+    targetPort: http
+  selector:
+    app: sonarqube
+    release: sonarqube
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - hostname: a185c82f847234f069a9eb8e1354f12f-965181513.us-east-2.elb.amazonaws.com
